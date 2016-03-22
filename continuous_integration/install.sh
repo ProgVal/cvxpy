@@ -72,6 +72,8 @@ if [[ "$DISTRIB" == "conda" ]]; then
         cd "$oldpath"
     fi
 
+    conda install libgfortran
+
     if [[ "$INSTALL_MKL" == "true" ]]; then
         # Make sure that MKL is used
         conda install --yes mkl
